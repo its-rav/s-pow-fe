@@ -104,12 +104,12 @@ function App() {
             <Tab
               {...a11yProps(0)}
               style={{ color: "white" }}
-              label="Proposer"
+              label="Proposals"
             />
             <Tab
               {...a11yProps(1)}
               style={{ color: "white" }}
-              label="Bounty seeker"
+              label="POWs"
             />
           </Tabs>
         </div>
@@ -127,6 +127,7 @@ function App() {
       <Container disableGutters>
         <Container maxWidth={"lg"}>
           <TabPanel value={menuValue} index={0}>
+            <Button style={{float:"right"}} variant="contained">Create Proposal</Button>
             <Box sx={{ width: "100%" }}>
               <Tabs
                 value={proposerValue}
@@ -142,9 +143,9 @@ function App() {
             <Box>
               <TabPanel value={value} index={0}>
                 <Stack>
-                  <Item>Proposal 1901</Item>
-                  <Item>Proposal 1902</Item>
-                  <Item>Proposal 1906</Item>
+                  <Item>Proposal 1901<Button style={{float:"right"}} size="small" variant="text">Approve</Button></Item>
+                  <Item>Proposal 1902<Button style={{float:"right"}} size="small" variant="text">Approve</Button></Item>
+                  <Item>Proposal 1906<Button style={{float:"right"}} size="small" variant="text">Approve</Button></Item>
                 </Stack>
               </TabPanel>
               <TabPanel value={value} index={1}>
@@ -180,9 +181,9 @@ function App() {
             <Box>
               <TabPanel value={value} index={0}>
                 <Stack>
-                  <Item>Proposal 1</Item>
-                  <Item>Proposal 2</Item>
-                  <Item>Proposal 3</Item>
+                  <Item>Proposal 1 <Button style={{float:"right"}} size="small" variant="text">Claim</Button></Item>
+                  <Item>Proposal 2 <Button style={{float:"right"}} size="small" variant="text">Claim</Button></Item>
+                  <Item>Proposal 3 <Button style={{float:"right"}} size="small" variant="text">Claim</Button></Item>
                 </Stack>
               </TabPanel>
               <TabPanel value={value} index={1}>
